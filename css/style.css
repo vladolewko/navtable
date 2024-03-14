@@ -16,7 +16,6 @@ html {
 li {
     list-style: none;
     position: relative;
-   
 }
 
 h1,
@@ -47,9 +46,10 @@ nav >ul{
   
    border-radius: 3px;
 }
-
-nav li {
+nav.second li{
     flex-grow: 1;
+}
+nav li {
     background-color: #2a3644;
     text-align: center;
     padding: 15px 30px;
@@ -78,7 +78,13 @@ nav ul li:nth-child(3) {
 li:hover>ul {
     display: block;
 }
+nav .last{
+    right: 0;
+    left: unset;
+}
 .submenu li{
+    width: 211px;
+    padding-left:18px;
     border: none;
     border-bottom: 1px #b9bdc1 solid;
 }
@@ -103,6 +109,26 @@ li:hover>ul {
 }   
 .wrap{
     background: #d2d4d5;
+    border-right: 1px #b9bdc1 solid;
+}
+.wrap li{
+    border-right: 1px #b9bdc1 solid;
+}
+.wrap li:last-child{
+    border-bottom: 1px #b9bdc1 solid;
+   
+}
+.wrap{
+    border-radius: 3px;
+    overflow: hidden;
+}
+.wrap li{
+    border-radius: 0;
+    padding-left: 18px;
+}
+.wrap li:nth-child(5){
+
+  border-right: none;
 }
 li:hover .wrap{
     max-height: 200px;
@@ -250,16 +276,17 @@ li:hover .wrap{
 }
 
 .socials {
+    padding-right: 28px;
     background: #2a3644;
     display: flex;
     align-items: center;
- 
+ column-gap: 28px;
     
 }
 .socials li{
-    height: 100%;
+
     border:none;
-    padding: 15px 25px;
+   padding: 0;
 }
     
 
@@ -304,7 +331,7 @@ table {
 }
 
 th {
-    padding: 16rem;
+
     color: #fff;
     font-size: 17px;
     border: 1rem #3f4852 solid;
@@ -326,7 +353,15 @@ td {
     border: 1rem #c0c1c2 solid;
     transition: .3s;
 }
-
+td:first-child{
+    border-left: none;
+}
+td:last-child{
+    border-right: none;
+}
+tr:last-child td{
+    border-bottom: none;
+}
 tr:hover td {
     background-color: #c0c1c2;
 }
@@ -347,24 +382,26 @@ td.year {
 }
 
 td.value {
+    width: 14%;
     text-align: end;
 }
 .table{
     display: table;
+    width: 100%;
+    
 }
-.thead {
+.tr {
     background-color: #2a3644;
+    display: table-row;
+    width: 100%;
+    display: table-row;
+}
+.th,
+.td{  
+    display: table-cell;
 }
 
-.thead .tr {
-    display: flex;
-}
-
-.tbody .tr {
-    display: flex;
-}
-
-.thead p {
+.table p {
     padding: 16px;
     color: #fff;
     font-size: 17px;
@@ -437,7 +474,16 @@ td.value {
 }
 
 .td.value {
-    text-align: center;
+    text-align: right;
     width: 14%;
 
+}
+.td:first-child{
+    border-left: none;
+}
+.td:last-child{
+    border-right: none;
+}
+.tr:last-child .td{
+    border-bottom: none;
 }
