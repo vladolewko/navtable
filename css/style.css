@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1px;
+}
+
+.wrapper{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+    position: relative;
+   
+}
+
+h1,
+h2 {
+    margin-bottom: 25rem;
+    font-size: 24rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: #bfbfbf;
+    font-weight: bold;
+    font-family: "Arial";
+}
+a,
+p {
+    font-size: 16rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: none;
+}
+.navigation {
+    margin-bottom: 60rem;
+}
+nav >ul{
+    display: flex;
+    justify-content: space-between;
+   background: #2a3644;
+  
+   border-radius: 3px;
+}
+
+nav li {
+    flex-grow: 1;
+    background-color: #2a3644;
+    text-align: center;
+    padding: 15px 30px;
+    border: .5px #3f4852 solid;
+}
+nav ul li:hover >a{
+    color: #ff8505;
+}
+nav ul >li:hover{
+    background-color: #3f4852;
+}
+
+nav >ul>:first-child{
+    border-radius: 3px 0 0 3px;
+}
+nav >ul>:last-child{
+    border-radius: 0 3px  3px 0;
+}
+nav>ul {
+    display: flex;
+    margin-bottom: 40px;
+}
+nav ul li:nth-child(3) {
+    position: relative;
+}
+li:hover>ul {
+    display: block;
+}
+.submenu li{
+    border: none;
+    border-bottom: 1px #b9bdc1 solid;
+}
+
+.submenu li:last-child{
+    border: none;
+}
+.submenu :first-child{
+    border-radius: 3px 3px 0 0;
+}
+.submenu :last-child{
+    border-radius: 0 0 3px  3px ;
+}
+
+.submenu {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    width:max-content
+}   
+.wrap{
+    background: #d2d4d5;
+}
+li:hover .wrap{
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.maxw{
+    max-width: 230px;
+}
+
+.submenu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+}
+
+.submenu li {
+    background: #d2d4d5;
+    transition: .3s;
+    text-align: left;
+}
+.submenu>li:hover {
+    background: #2a3644;
+
+}
+.submenu a {
+    color: #2a3644;
+}
+.submenu>li:hover>a {
+    color: #ff8505;
+}
+
+.secondsub {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 0;
+    width: max-content;
+}
+.secondsub li {
+    background: #d2d4d5;
+    transition: .3s;
+
+}
+.secondsub a {
+    color: #2a3644;
+}
+.secondsub>li:hover {
+    background: #2a3644;
+
+}
+.secondsub>li:hover>a {
+    color: #ff8505;
+}
+
+.secondsub::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 5px;
+    height: 45px;
+}
+
+.thirdsub {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    right: calc(100% + 5px);
+    top: 0;
+    width: 211px;
+}
+
+.thirdsub::before {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 0;
+    width: 5px;
+    height: 45px;
+}
+
+.thirdsub li {
+    background: #d2d4d5;
+    transition: .3s;
+
+}
+
+.thirdsub>a {
+    color: #2a3644;
+}
+
+.thirdsub>li:hover {
+    background: #2a3644;
+
+}
+
+.thirdsub>li:hover a {
+    color: #ff8505;
+}
+
+.lastmenu{
+    display: flex;
+    justify-content: space-between;
+    background: #2a3644;
+    border-radius: 3px;
+}
+.lastmenu.submenu li{
+    border: none;
+}
+.lastmenu ul{
+    margin: 0;
+}
+.lastmenu >li{
+    border: none;
+    border-left: 1px #3f4852 solid;
+}
+
+
+.main{
+    padding: 15px 30px 15px 60px;
+    width: 153px;
+}
+
+.img:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    width: 16px;
+    height: 13px;
+    background: url(../img/icons.png), no-repeat;
+    background-position: -45px 0;
+    transition: .3s;
+
+}
+.main:hover a.img::before{
+    background-position: -45px -20px;
+}
+
+.socials {
+    background: #2a3644;
+    display: flex;
+    align-items: center;
+ 
+    
+}
+.socials li{
+    height: 100%;
+    border:none;
+    padding: 15px 25px;
+}
+    
+
+.socials a {
+  
+    display: block;
+    background: url(../img/icons.png);
+    transition: 0.3s;
+}
+a.fb {
+    width: 9px;
+    height: 18px;
+    background-position: 0 0;
+}
+
+a.tw {
+    width: 16px;
+    height: 14px;
+    background-position: -11px 0;
+}
+a.inst {
+    width: 14px;
+    height: 16px;
+    background-position: -29px 0;
+}
+li:hover .fb {
+    background-position: 0 -20px;
+}
+li:hover .tw {
+    background-position: -11px -20px;
+}
+li:hover .inst{
+    background-position: -29px -20px;
+}
+
+table {
+    overflow: hidden;
+    margin-bottom: 50rem;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 3rem;
+}
+
+th {
+    padding: 16rem;
+    color: #fff;
+    font-size: 17px;
+    border: 1rem #3f4852 solid;
+    background-color: #2a3644;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #e8e8e8;
+}
+
+td {
+    padding: 16rem;
+    color: #000;
+    font-size: 17px;
+    border: 1rem #c0c1c2 solid;
+    transition: .3s;
+}
+
+tr:hover td {
+    background-color: #c0c1c2;
+}
+
+td.first,
+th.first {
+    width: 7%;
+    text-align: center;
+}
+
+td.second {
+    text-align: left;
+    width: 53%;
+}
+
+td.year {
+    width: 14%;
+}
+
+td.value {
+    text-align: end;
+}
+.table{
+    display: table;
+}
+.thead {
+    background-color: #2a3644;
+}
+
+.thead .tr {
+    display: flex;
+}
+
+.tbody .tr {
+    display: flex;
+}
+
+.thead p {
+    padding: 16px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.tbody p {
+    padding: 16rem;
+    font-size: 17px;
+}
+
+.table {
+    overflow: hidden;
+    margin-bottom: 50rem;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 3rem;
+    border: none;
+}
+
+.th {
+    color: #fff;
+    font-size: 17px;
+    border: .5rem #3f4852 solid;
+    background-color: #2a3644;
+}
+
+.table .tr:nth-child(2n) {
+    background-color: #f2f2f2;
+}
+
+.table .tr:nth-child(2n-1) {
+    background-color: #e8e8e8;
+}
+
+.td {
+    padding: 16rem;
+    font-size: 17px;
+    border: .5rem #c0c1c2 solid;
+    transition: .3s;
+}
+
+.tr:hover .td {
+    background-color: #c0c1c2;
+}
+
+.th.first {
+    width: 7%;
+    text-align: center;
+}
+
+.th.second {
+    width: 53%;
+    text-align: left;
+}
+
+.th.year {
+    text-align: center;
+    width: 14%;
+
+}
+
+.td.first {
+    width: 7%;
+    text-align: center;
+}
+
+.td.second {
+    width: 53%;
+    text-align: left;
+}
+
+.td.value {
+    text-align: center;
+    width: 14%;
+
+}
