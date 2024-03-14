@@ -126,10 +126,22 @@ nav .last{
     border-radius: 0;
     padding-left: 18px;
 }
+.wrap li:first-child{
+    border-radius: 0;
+}
+.wrap li:last-child{
+    border-radius: 0;
+}
+.wrap li:nth-child(4){
+    border-bottom: none; 
+}
 .wrap li:nth-child(5){
-
   border-right: none;
 }
+.wrap {
+    border-right: none;
+  }
+
 li:hover .wrap{
     max-height: 200px;
     display: flex;
